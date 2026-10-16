@@ -1,0 +1,231 @@
+{
+  "nodos": [
+    {
+      "id": "inicio",
+      "texto": "¡Hola! ⚽ Bienvenido a Fútbol Bot, tu asistente futbolero. Para empezar, ¿cómo te llamás?",
+      "tipo": "nombre",
+      "boton": "Continuar",
+      "opciones": [
+        {
+          "texto": "Continuar",
+          "siguiente": "menu_principal"
+        }
+      ]
+    },
+    {
+      "id": "menu_principal",
+      "texto": "¡Genial, {{nombre}}! ¿Qué te gustaría consultar hoy?",
+      "opciones": [
+        {
+          "texto": "⚽ Hacer una pregunta",
+          "siguiente": "consulta_general"
+        },
+        {
+          "texto": "🏟️ Información de equipos",
+          "siguiente": "consulta_equipo"
+        },
+        {
+          "texto": "🌟 Información de jugadores",
+          "siguiente": "consulta_jugador"
+        },
+        {
+          "texto": "🌎 Selecciones nacionales",
+          "siguiente": "consulta_seleccion"
+        },
+        {
+          "texto": "📅 Partidos por fecha",
+          "siguiente": "consulta_partidos"
+        },
+        {
+          "texto": "📖 Reglas del fútbol",
+          "siguiente": "reglas"
+        },
+        {
+          "texto": "⏹ Terminar conversación",
+          "siguiente": "terminar"
+        }
+      ]
+    },
+    {
+      "id": "consulta_general",
+      "texto": "¡Dale, {{nombre}}! Escribí tu pregunta futbolera. Voy a buscar una respuesta en mi información local.",
+      "tipo": "consulta",
+      "boton": "Consultar",
+      "retorno": "menu_principal",
+      "opciones": [
+        {
+          "texto": "Consultar",
+          "siguiente": "menu_principal"
+        }
+      ]
+    },
+    {
+      "id": "consulta_equipo",
+      "texto": "¿Sobre qué equipo querés saber más? Podés ingresar su nombre.",
+      "tipo": "equipo",
+      "boton": "Buscar equipo",
+      "retorno": "menu_principal",
+      "opciones": [
+        {
+          "texto": "Buscar equipo",
+          "siguiente": "menu_principal"
+        }
+      ]
+    },
+    {
+      "id": "consulta_jugador",
+      "texto": "¿Qué jugador te interesa? Escribí su nombre para consultar la información disponible.",
+      "tipo": "jugador",
+      "boton": "Buscar jugador",
+      "retorno": "menu_principal",
+      "opciones": [
+        {
+          "texto": "Buscar jugador",
+          "siguiente": "menu_principal"
+        }
+      ]
+    },
+    {
+      "id": "consulta_seleccion",
+      "texto": "¿Qué selección nacional querés consultar?",
+      "tipo": "seleccion",
+      "boton": "Buscar selección",
+      "retorno": "menu_principal",
+      "opciones": [
+        {
+          "texto": "Buscar selección",
+          "siguiente": "menu_principal"
+        }
+      ]
+    },
+    {
+      "id": "consulta_partidos",
+      "texto": "Elegí la fecha que querés consultar. Tené en cuenta que todavía no tengo acceso a calendarios en tiempo real.",
+      "tipo": "partido",
+      "boton": "Consultar fecha",
+      "retorno": "menu_principal",
+      "opciones": [
+        {
+          "texto": "Consultar fecha",
+          "siguiente": "menu_principal"
+        }
+      ]
+    },
+    {
+      "id": "reglas",
+      "texto": "¿Qué regla querés conocer?",
+      "opciones": [
+        {
+          "texto": "🚩 Fuera de juego",
+          "siguiente": "regla_fuera_juego"
+        },
+        {
+          "texto": "🥅 Penal",
+          "siguiente": "regla_penal"
+        },
+        {
+          "texto": "⏱️ Duración del partido",
+          "siguiente": "regla_duracion"
+        },
+        {
+          "texto": "👥 Cantidad de jugadores",
+          "siguiente": "regla_jugadores"
+        },
+        {
+          "texto": "🏠 Menú principal",
+          "siguiente": "menu_principal"
+        },
+        {
+          "texto": "⏹ Terminar conversación",
+          "siguiente": "terminar"
+        }
+      ]
+    },
+    {
+      "id": "regla_fuera_juego",
+      "texto": "El fuera de juego se sanciona cuando un jugador participa en una jugada estando en posición adelantada según las reglas. Estar adelantado no es infracción por sí solo: depende de su participación en la acción.",
+      "opciones": [
+        {
+          "texto": "↩ Volver a las reglas",
+          "siguiente": "reglas"
+        },
+        {
+          "texto": "🏠 Menú principal",
+          "siguiente": "menu_principal"
+        },
+        {
+          "texto": "⏹ Terminar conversación",
+          "siguiente": "terminar"
+        }
+      ]
+    },
+    {
+      "id": "regla_penal",
+      "texto": "Se sanciona un penal cuando un jugador comete dentro de su propia área una infracción que se castiga con tiro libre directo.",
+      "opciones": [
+        {
+          "texto": "↩ Volver a las reglas",
+          "siguiente": "reglas"
+        },
+        {
+          "texto": "🏠 Menú principal",
+          "siguiente": "menu_principal"
+        },
+        {
+          "texto": "⏹ Terminar conversación",
+          "siguiente": "terminar"
+        }
+      ]
+    },
+    {
+      "id": "regla_duracion",
+      "texto": "Un partido reglamentario dura 90 minutos, divididos en dos tiempos de 45 minutos, más el tiempo añadido por el árbitro. Según la competición, puede haber prórroga y penales.",
+      "opciones": [
+        {
+          "texto": "↩ Volver a las reglas",
+          "siguiente": "reglas"
+        },
+        {
+          "texto": "🏠 Menú principal",
+          "siguiente": "menu_principal"
+        },
+        {
+          "texto": "⏹ Terminar conversación",
+          "siguiente": "terminar"
+        }
+      ]
+    },
+    {
+      "id": "regla_jugadores",
+      "texto": "Cada equipo juega con 11 futbolistas en el campo, incluido el arquero. El número puede reducirse por expulsiones, dentro de los límites reglamentarios.",
+      "opciones": [
+        {
+          "texto": "↩ Volver a las reglas",
+          "siguiente": "reglas"
+        },
+        {
+          "texto": "🏠 Menú principal",
+          "siguiente": "menu_principal"
+        },
+        {
+          "texto": "⏹ Terminar conversación",
+          "siguiente": "terminar"
+        }
+      ]
+    },
+    {
+      "id": "fin",
+      "texto": "¡Gracias por usar Fútbol Bot!",
+      "opciones": [
+        {
+          "texto": "Volver a empezar",
+          "siguiente": "reiniciar"
+        },
+        {
+          "texto": "Terminar conversación",
+          "siguiente": "terminar"
+        }
+      ]
+    }
+  ]
+}

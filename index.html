@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#087c43">
+    <title>Fútbol Bot | Tu asistente futbolero</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="encabezado">
+        <div class="marca">
+            <div class="logo">⚽</div>
+            <div>
+                <h1>Fútbol Bot</h1>
+                <p>Tu pasión, tus respuestas</p>
+            </div>
+        </div>
+        <span class="estado">
+            <span class="punto"></span> Asistente disponible
+        </span>
+    </header>
+
+    <main class="contenedor">
+        <aside class="panel-conversaciones">
+            <div class="perfil-bot">
+                <div class="avatar-grande">⚽</div>
+                <h2>¡Hola, futbolero!</h2>
+                <p>Tu compañero para descubrir todo sobre el fútbol.</p>
+            </div>
+
+            <h3>Tu conversación</h3>
+            <div id="resumen-conversacion" class="resumen">
+                <span class="icono-resumen">💬</span>
+                <div>
+                    <strong>Chat futbolero</strong>
+                    <p id="nombre-usuario">Nueva conversación</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-dato">
+                <span>🏆</span>
+                <p>Equipos, jugadores, selecciones y partidos en un solo lugar.</p>
+            </div>
+
+            <button id="boton-reiniciar-lateral"
+                    class="boton-secundario"
+                    type="button">
+                ↻ Volver a empezar
+            </button>
+        </aside>
+
+        <section class="panel-chat" aria-label="Chat de fútbol">
+            <div class="chat-cabecera">
+                <div class="avatar-chat">⚽</div>
+                <div>
+                    <h2>Asistente futbolero</h2>
+                    <p>Preguntá y descubrí</p>
+                </div>
+                <span class="etiqueta">FÚTBOL</span>
+            </div>
+
+            <div id="zona-chat"
+                 class="zona-chat"
+                 role="log"
+                 aria-live="polite"
+                 aria-label="Mensajes de la conversación">
+            </div>
+
+            <div class="pie-chat">
+                <p>Elegí una opción para continuar</p>
+                <div id="zona-opciones" class="zona-opciones"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>⚽ Fútbol Bot · Hecho para los amantes del fútbol</p>
+    </footer>
+</body>
+</html>
